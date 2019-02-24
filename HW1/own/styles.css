@@ -7,6 +7,7 @@ body{
     padding: 20px;
     margin: 50px;
     border-radius: 5px;
+    box-shadow: 3px 3px 5px #585858;
 }
 .header{
     text-align: center;
@@ -24,6 +25,7 @@ img{
     margin-left: auto;
     margin-right: auto;
     width: 30%;
+    box-shadow: 3px 3px 5px #585858;
 }
 table{
     /*background: white;*/
@@ -40,10 +42,14 @@ table{
     padding-top: 20px;
     padding-bottom: 20px;
     margin: 10px;
-    border-radius: 5px;
+}
+ul{
+    border-right-style: dotted;
+    border-right-color: #f5af18;
 }
 .color{
-    color: darkred;
+    color: rgb(184, 0, 0);
+    color: #f5af18;
 }
 
 
