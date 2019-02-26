@@ -10,7 +10,7 @@
 ### 5. list部分沒有實作
 ### 6. Blocks and Inline Elements部分以下也沒有實作
 # 值得學習的地方
-### table有加上外誆
+### table有加上外框
 # 建議改進的地方
 ### 建議使用css裝飾美化網頁
 # 其他心得
