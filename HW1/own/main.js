@@ -20,10 +20,6 @@ input.addEventListener('keyup', event => {
         state = 0;
         // create element in todo list: get its element
         var list = document.getElementById("todo-list");
-        // clear the todo list
-        while (list.firstChild) {
-            list.removeChild(list.firstChild);
-        }
 
         // setAttributes
         var li = document.createElement("li");
@@ -71,8 +67,26 @@ input.addEventListener('keyup', event => {
 
         // delete: 
         image.addEventListener('mouseup', function(){
-            console.log('delete');
-            // notcompleted_num -= 1;
+            todoListData.splice(todoListData.indexOf(newItem), 1);
+            // create element in todo list: get its element
+            var list = document.getElementById("todo-list");
+            // clear the todo list
+            while (list.firstChild) {
+                list.removeChild(list.firstChild);
+            }
+            // update display
+            if(state === 0){
+                notcompleted_num = todoListData.filter(ele => !ele.isComplete).length
+                todoListData.map(ele => list.appendChild(ele.node));
+            }
+            if(state === 1){
+                var filter_completed = todoListData.filter(ele => ele.isComplete);
+                filter_completed.map(ele => list.appendChild(ele.node));
+            }
+            if(state === 2){
+                var filter_completed = todoListData.filter(ele => ele.isComplete);
+                filter_completed.map(ele => list.appendChild(ele.node));
+            }
         });
         
         li.appendChild(wrapper);
@@ -81,9 +95,7 @@ input.addEventListener('keyup', event => {
 
         // display: add the new input into the array and display
         todoListData.push(newItem);
-
-        notcompleted_num = todoListData.filter(ele => !ele.isComplete).length
-        todoListData.map(ele => list.appendChild(ele.node));
+        list.appendChild(li);
 
         // update data
         document.getElementById("todo-list").style = "list-style-type:none";
