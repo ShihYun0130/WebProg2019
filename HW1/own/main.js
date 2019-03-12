@@ -14,6 +14,7 @@ var notcompleted_num = 0;
 var completed_array = [];
 var clear = document.getElementById("clear");
 var state = 0;
+var todoCount = document.getElementById("todo-total");
 
 input.addEventListener('keyup', event => {
     if (event.keyCode === 13 && event.target.value !== '') {   
@@ -76,7 +77,7 @@ input.addEventListener('keyup', event => {
             }
             // update display
             if(state === 0){
-                notcompleted_num = todoListData.filter(ele => !ele.isComplete).length
+                // notcompleted_num = todoListData.filter(ele => !ele.isComplete).length
                 todoListData.map(ele => list.appendChild(ele.node));
             }
             if(state === 1){
@@ -87,6 +88,9 @@ input.addEventListener('keyup', event => {
                 var filter_completed = todoListData.filter(ele => ele.isComplete);
                 filter_completed.map(ele => list.appendChild(ele.node));
             }
+            // update count
+            notcompleted_num = todoListData.length;
+            todoCount.innerText = notcompleted_num + " left"; 
         });
         
         li.appendChild(wrapper);
@@ -102,7 +106,7 @@ input.addEventListener('keyup', event => {
         input.value = "";
 
         // update count
-        var todoCount = document.getElementById("todo-total");
+        notcompleted_num = todoListData.length;
         todoCount.innerText = notcompleted_num + " left"; 
     }
 });
