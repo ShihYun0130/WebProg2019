@@ -1,5 +1,5 @@
 ### README.md
-1. input todo item and add them into the list
+1. input todo items and add them into the list
 2. delete an item from the list
 3. click on the item and mark it as completed
 4. update the number of uncompleted items
