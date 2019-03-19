@@ -55,6 +55,7 @@ input.addEventListener('keyup', event => {
                 completed_array.splice(completed_array.indexOf(newItem), 1);
                 console.log(completed_array);
             }
+            update();
         });
 
         label.setAttribute("for", todoListData.length);
@@ -68,6 +69,9 @@ input.addEventListener('keyup', event => {
 
         // delete: 
         image.addEventListener('mouseup', function(){
+            if(newItem.isComplete === true){
+                completed_array.splice(completed_array.indexOf(newItem), 1);
+            }
             todoListData.splice(todoListData.indexOf(newItem), 1);
             // create element in todo list: get its element
             var list = document.getElementById("todo-list");
@@ -89,8 +93,9 @@ input.addEventListener('keyup', event => {
                 filter_completed.map(ele => list.appendChild(ele.node));
             }
             // update count
-            notcompleted_num = todoListData.length;
+            notcompleted_num = todoListData.length - completed_array.length;
             todoCount.innerText = notcompleted_num + " left"; 
+            update();
         });
         
         li.appendChild(wrapper);
@@ -108,6 +113,7 @@ input.addEventListener('keyup', event => {
         // update count
         notcompleted_num = todoListData.length;
         todoCount.innerText = notcompleted_num + " left"; 
+        update();
     }
 });
 
@@ -175,6 +181,24 @@ clear.addEventListener('mouseup', function(){
         var filter_completed = todoListData.filter(ele => ele.isComplete);
         filter_completed.map(ele => list.appendChild(ele.node));
     }
+    update();
 });
 
+function update(){
+    // footer visible or not
+    if(todoListData.length === 0){
+        document.getElementById("todo-footer").style['visibility'] = "hidden";
+    }
+    else{
+        document.getElementById("todo-footer").style['visibility'] = "visible";
+    }
+    //completed visibility or not
+    if(completed_array.length === 0){
+        document.getElementById("clear").style['visibility'] = "hidden";
+    }
+    else{
+        document.getElementById("clear").style['visibility'] = "visible";
+    }
+    // update left number
+}
 

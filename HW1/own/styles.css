@@ -135,6 +135,7 @@ input[type='checkbox'] {
 .todo-app__footer {
     width: 100%;
     display: flex;
+    visibility: hidden;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -180,6 +181,7 @@ input[type='checkbox'] {
 }
 
 .todo-app__clean {
+    visibility: hidden;
     vertical-align: middle;
 }
 
