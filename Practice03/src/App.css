@@ -124,7 +124,7 @@
 }
 
 .article {
-  max-width: 350px;
+  min-width: 350px;
   display: flex;
   flex-direction: column;
   margin: 2vw;
@@ -152,7 +152,7 @@
 
 .shortArticle {
   margin-left: 10px;
-  max-width: 23vw;
+  max-width: 300px;
   margin-bottom: 15px;
 }
 
