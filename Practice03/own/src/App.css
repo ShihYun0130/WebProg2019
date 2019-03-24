@@ -51,9 +51,20 @@
   padding: 10px;
   border-radius: 4px;
   font-size: 0.7em;
+  background-color: rgb(63, 63, 63);
+  border-color: #EEEEEE;
+  color: #EEEEEE;
+  white-space:nowrap;
+}
+
+.signUp:hover {
+  margin: auto 2%;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 0.7em;
   background-color: #EEEEEE;
   border-color: #EEEEEE;
-  color: rgb(92, 88, 34);
+  color: rgb(63, 63, 63);
   white-space:nowrap;
 }
 
@@ -167,7 +178,7 @@
 .introduction {
   padding: 8vw;
   color: rgb(63, 63, 63);
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 
 .introduction img {
@@ -177,4 +188,112 @@
 
 .aboutMe {
   font-size: 3vw;
+}
+
+.gallery {
+  background-color: #EEEEEE;
+}
+
+.images {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 0vw 4vw 4vw 4vw;
+}
+
+
+.image {
+  margin-bottom: 2vw;
+}
+.images img {
+  border-radius: 10px;
+  width: 20vw;
+}
+
+.image:hover {
+  -webkit-filter: brightness(.5);
+  transition-delay: 0.1s;
+}
+
+.galleryText {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Amatic SC', cursive;
+  color: #EEEEEE;
+  font-size: 5vw;
+  text-align: center;
+  background-color: rgb(63, 63, 63);
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 30px;
+}
+
+.footer {
+  background-color: rgb(63, 63, 63);
+  padding: 40px 50px 70px 50px;
+  font-size: 3vw;
+  font-family: 'Amatic SC', cursive;
+  display: flex;
+  flex-direction: row;
+}
+
+.recentPostText {
+  margin: 0 20px 20px 0;
+  color: #EEEEEE;
+}
+
+.recentPost {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  font-size: 2vw;
+  color: #EEEEEE;
+  padding-left: 0;
+  flex-wrap: wrap;
+  padding-right: 0;
+  justify-content: space-around;
+}
+
+.articleLink {
+  list-style-position: inside;
+  margin-left: 0;
+  white-space: nowrap;
+  margin-bottom: 20px;
+}
+
+.other {
+  margin-left: 20px;
+}
+
+.searchText {
+  margin: 0 20px 0px 20px;
+  padding-bottom: 20px; 
+  width: 150px;
+  height: 20px;
+  color: #EEEEEE;
+}
+
+.searchInput {
+  margin: 20px;
+  width: 150px;
+  height: 20px;
+  margin-right: 3px;
+}
+
+.author {
+  color: #EEEEEE;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.search img {
+  width: 2vw;
+  height: 1.8vw;
+  margin: 20px;
+  margin-left: 3px;
 }

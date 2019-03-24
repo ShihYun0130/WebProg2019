@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import road from './road.png';
 import caticon from './caticon.png';
+import search from './search.png';
 import './App.css';
 
 class App extends Component {
@@ -67,9 +68,39 @@ class App extends Component {
             </p>
           </div>
           
-          <div className="contactUs">
-            
+          
+          <div className="gallery">
+            <div className="galleryText"> Gallery: Poems without words </div>
+            <div className="images">
+              {this.props.images.map( e => <div className="image"><img src={e} alt="" /></div>)}
+            </div>
           </div>
+
+          <div className="footer">
+            <div className="recent">
+              <div className="recentPostText">Recent Posts</div>
+              <ul className="recentPost">
+                <li className="articleLink">Without music, life would be a mistake.</li>
+                <li className="articleLink">Without music, life would be a mistake.</li>
+                <li className="articleLink">Without music, life would be a mistake.</li>
+                <li className="articleLink">Without music, life would be a mistake.</li>
+                <li className="articleLink">Without music, life would be a mistake.</li>
+                <li className="articleLink">Without music, life would be a mistake.</li>
+              </ul>
+            </div>
+            <div className="other">
+              <div className="searchText"> Search </div>
+              <div className="search">
+                <input className="searchInput" placeholder="Search"/>
+                <img src={search} alt="" />
+              </div>
+              <div className="author">
+                <div> Author </div>
+                <div> Shih Yun Chen </div>
+              </div>
+            </div>
+          </div>
+          
 
         </div>
       </div>

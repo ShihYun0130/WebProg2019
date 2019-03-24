@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import cat from './cat.png';
 import kitchen from './kitchen.png';
+import door from './door.png';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -16,7 +17,9 @@ const articles = [
     [kitchen, 'door', '認識了正四面體與正六面體，接著我們要用同樣的方法，來製作正八面體與正十二面體，這兩個正多面體雖然組合的面比較多，不過因為具備了對稱性，所以只需要製作出一半的結構，另外一半再用反轉的方式接在一起即可。']
 ]
 
-ReactDOM.render(< App bars = {bars} articles = {articles} />, document.getElementById('root'));
+const images = [ door, door, door, door, door, door, door, door ];
+
+ReactDOM.render(< App bars = {bars} articles = {articles} images = {images} />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
